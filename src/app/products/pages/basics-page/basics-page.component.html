@@ -1,0 +1,68 @@
+<p-panel header="Pipes Basicos" class="p-1">    
+    <p>
+        Pipes incluidos en Angular - Usualmente en el Common Mudule
+    </p>
+</p-panel>
+
+<div class="grid">
+    <div class="col-12 md:col-4">
+        <p-card header="Uppercase">
+            {{upper | uppercase}}
+        </p-card>
+    </div>
+    <div class="col-12 md:col-4">
+        <p-card header="Lowercase">
+            {{lower | lowercase}}
+        </p-card>
+    </div>
+    <div class="col-12 md:col-4">
+        <p-card header="Tittlecase">
+            {{tittle | titlecase}}
+        </p-card>
+    </div>
+</div>
+<div class="grid">
+    <div class="col-12 md:col-6">
+        <p-card header="Fechas">
+        <ol>
+            <li>fecha </li>
+            <li>fecha | date </li>
+            <li>fecha | date:"short" </li>
+            <li>fecha | date:"long" </li>
+            <li>fecha | date:"MMMM" </li>
+            <li>fecha | date:"YYYY" </li>
+            <li>fecha | date:"MMMM,dd,YYYY" </li>            
+        </ol>
+        <hr>
+        <ol>
+            <li>fecha | date:"long":"GMT-6"</li>
+            <li>fecha | date:"long":"GMT-4"</li>                
+            <li>fecha | date:"long":"GMT-4":"es-CO"</li>    
+            <li>fecha | date:"long":"GMT-4":"en-US"</li>    
+            <li>fecha | date:"long":"GMT-4":"FR"</li>          
+        </ol>
+        </p-card>
+    </div>
+    <div class="col-12 md:col-6">
+        <p-card header="Fechas Pipes">
+            <ol>
+                <li>{{ custom }}</li>
+                <li>{{ custom | date }}</li>
+                <li>{{ custom | date:"short" }}</li>
+                <li>{{ custom | date:"long" }}</li>
+                <li>{{ custom | date:"MMMM" }}</li>
+                <li>{{ custom | date:"YYYY" }}</li>
+                <li>{{ custom | date:"MMMM,dd,YYYY" }}</li>
+            </ol>
+            <hr>
+            <ol>
+                <li>{{ custom | date:"long":"GT-6" }}</li>
+                <li>{{ custom | date:"long":"GT-4" }}</li>                
+                <li>{{ custom | date:"long":"GT-4":"es-co" }}</li>     
+                <li>{{ custom | date:"long":"GT-4":"en-US" }}</li>             
+                <li>{{ custom | date:"long":"GT-4":"fr" }}</li>                
+            </ol>
+
+        </p-card>
+    </div>
+</div>
