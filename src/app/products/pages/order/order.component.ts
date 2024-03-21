@@ -10,7 +10,7 @@ export class OrderComponent {
 
   public isUpperCase: boolean = false;
   public orderBy?: keyof Hero;
-
+  public activo: boolean = true;
   public heroes: Hero[] = [
     {
       name: 'Superman',
@@ -46,6 +46,7 @@ export class OrderComponent {
 
   changeOrder( value: keyof Hero ){
     this.orderBy = value;
+    this.activo = !this.activo;
   }
 
 }
